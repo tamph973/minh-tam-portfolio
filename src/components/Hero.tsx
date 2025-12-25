@@ -21,7 +21,7 @@ export const Hero: React.FC = () => {
 					Minh Tam
 				</h1>
 				<h2 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-8 tracking-tight'>
-					Backend / Fullstack Developer
+					Backend Developer
 				</h2>
 				<p className='text-lg sm:text-xl text-[#637588] dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed'>
 					I build high-performance backend architectures, secure APIs,
