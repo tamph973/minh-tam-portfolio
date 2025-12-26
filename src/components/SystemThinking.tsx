@@ -17,9 +17,9 @@ export const SystemThinking: React.FC = () => {
 							System Thinking
 						</h2>
 						<p className='text-[#637588] dark:text-gray-400 text-lg'>
-							I build with a product-oriented mindset, ensuring
-							that technical decisions translate into secure,
-							performant, and reliable user experiences.
+							I build with a product-oriented mindset, focusing on
+							making technical decisions that lead to secure,
+							maintainable, and reliable backend systems.
 						</p>
 					</div>
 					<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>

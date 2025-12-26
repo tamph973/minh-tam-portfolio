@@ -110,7 +110,7 @@ export const Contact: React.FC = () => {
 							</p>
 						</div>
 
-						<div className='grid grid-cols-2 gap-4'>
+						<div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
 							<a
 								className='flex items-center gap-4 p-4 rounded-xl border border-[#e5e7eb] dark:border-gray-800 hover:border-primary hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-all group'
 								href='mailto:phtam0907@gmail.com'>

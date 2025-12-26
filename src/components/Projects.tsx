@@ -48,7 +48,7 @@ export const Projects: React.FC = () => {
 								<h3 className='text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors mb-2'>
 									{project.title}
 								</h3>
-								<p className='text-[#637588] dark:text-gray-400 text-sm mb-6 flex-grow'>
+								<p className='text-[#637588] dark:text-gray-400 text-sm mb-6 flex-grow '>
 									{project.description}
 								</p>
 								<div className='flex flex-wrap gap-2 mb-6'>

@@ -23,10 +23,11 @@ export const Hero: React.FC = () => {
 				<h2 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-8 tracking-tight'>
 					Backend Developer
 				</h2>
-				<p className='text-lg sm:text-xl text-[#637588] dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed'>
-					I build high-performance backend architectures, secure APIs,
-					and scalable systems. Passionate about clean code, database
-					optimization, and engineering robust product solutions.
+				<p className='text-lg text-justify sm:text-xl text-[#637588] dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed'>
+					I build backend APIs using Node.js and Spring Boot, focusing
+					on clean code, RESTful design, and reliable data handling.
+					Passionate about learning, improving backend skills, and
+					building practical product features.
 				</p>
 				<div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
 					<a
@@ -45,7 +46,7 @@ export const Hero: React.FC = () => {
 					</a>
 				</div>
 			</div>
-			<div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 w-[850px] h-[800px] opacity-[0.05] dark:opacity-[0.07] pointer-events-none'>
+			<div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 w-[850px] h-[800px] opacity-[0.06] dark:opacity-[0.07] pointer-events-none'>
 				<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'>
 					<path
 						d='M44.7,-76.4C58.9,-69.2,71.8,-59.1,81.6,-46.6C91.4,-34.1,98.1,-19.2,95.8,-5.3C93.5,8.6,82.2,21.4,70.9,32.2C59.6,43,48.3,51.8,36.4,58.8C24.5,65.9,12,71.2,-1.2,73.3C-14.4,75.4,-29.8,74.3,-42.9,67.6C-56,60.9,-66.8,48.6,-74.6,35.1C-82.4,21.6,-87.2,6.9,-85.2,-7.1C-83.2,-21.1,-74.4,-34.4,-63.4,-45.3C-52.4,-56.2,-39.2,-64.7,-25.9,-72.4C-12.6,-80.1,0.8,-87,14.6,-86.6C28.4,-86.2,42.5,-78.5,44.7,-76.4Z'
