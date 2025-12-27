@@ -166,7 +166,7 @@ export const Contact: React.FC = () => {
 							</a>
 							<a
 								className='flex items-center gap-4 p-4 rounded-xl border border-[#e5e7eb] dark:border-gray-800 hover:border-primary hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-all group'
-								href='/cv-minh-tam.pdf'
+								href='/PhamMinhTam_Resume.pdf'
 								download>
 								<div className='w-10 h-10 rounded-lg bg-gray-50 dark:bg-gray-800 flex items-center justify-center group-hover:bg-primary/10'>
 									<span className='material-symbols-outlined text-xl text-[#637588] dark:text-gray-400 group-hover:text-primary'>

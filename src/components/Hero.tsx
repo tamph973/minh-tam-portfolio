@@ -37,7 +37,7 @@ export const Hero: React.FC = () => {
 					</a>
 					<a
 						className='w-full sm:w-auto inline-flex items-center justify-center h-12 px-8 rounded-lg bg-white dark:bg-gray-800 border border-[#dbe0e6] dark:border-gray-700 text-[#111418] dark:text-white font-bold text-base hover:bg-gray-50 dark:hover:bg-gray-700 transition-all'
-						href='/cv-minh-tam.pdf'
+						href='/PhamMinhTam_Resume.pdf'
 						download>
 						<span className='material-symbols-outlined mr-2 text-xl'>
 							download

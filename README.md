@@ -94,7 +94,7 @@ Mở URL mà Vite hiển thị trong terminal (thường là `http://localhost:5
 
 #### CV File
 
--   Đặt file CV của bạn vào thư mục `public` với tên: `cv-minh-tam.pdf`.
+-   Đặt file CV của bạn vào thư mục `public` với tên: `PhamMinhTam_Resume.pdf`.
 -   Các nút **Resume / Download CV** trong Navbar, Hero và Contact sẽ tự động tải file này về máy người dùng.
 
 ---
@@ -104,7 +104,7 @@ Mở URL mà Vite hiển thị trong terminal (thường là `http://localhost:5
 ```text
 minh-tam-portfolio/
 ├── public/                 # Static assets (images, CV, favicon, ...)
-│   ├── cv-minh-tam.pdf     # CV file (tùy chỉnh)
+│   ├── PhamMinhTam_Resume.pdf     # CV file (tùy chỉnh)
 │   └── images/             # Hình ảnh sử dụng trong portfolio
 ├── src/
 │   ├── components/         # Các section chính của trang

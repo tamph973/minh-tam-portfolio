@@ -54,7 +54,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
 
 						<a
 							className='inline-flex items-center justify-center h-9 px-4 rounded-lg bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all'
-							href='/cv-minh-tam.pdf'
+							href='/PhamMinhTam_Resume.pdf'
 							download>
 							Resume
 						</a>
@@ -168,7 +168,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
 								</a>
 								<div className='border-t border-white/10 p-4'>
 									<a
-										href='/cv-minh-tam.pdf'
+										href='/PhamMinhTam_Resume.pdf'
 										download
 										onClick={() => setIsMobileOpen(false)}
 										className='flex items-center justify-center gap-2 w-full px-4 py-2 rounded-lg bg-primary text-sm font-bold hover:bg-primary/90'>
