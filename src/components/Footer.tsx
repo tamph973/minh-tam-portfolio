@@ -8,9 +8,14 @@ export const Footer: React.FC = () => {
 					<span className='material-symbols-outlined text-primary'>
 						terminal
 					</span>
-					<span className='text-sm font-semibold text-[#111418] dark:text-gray-100'>
-						Minh Tam © {new Date().getFullYear()}
-					</span>
+					<div className='flex flex-col'>
+						<span className='text-sm font-semibold text-[#111418] dark:text-gray-100'>
+							Minh Tam © {new Date().getFullYear()}
+						</span>
+						<span className='text-xs text-[#637588] dark:text-gray-500'>
+							Backend Developer — Java & NodeJS
+						</span>
+					</div>
 				</div>
 				<div className='flex gap-6 text-sm'>
 					<a
@@ -22,6 +27,11 @@ export const Footer: React.FC = () => {
 						className='text-[#637588] dark:text-gray-400 hover:text-primary transition-colors font-medium'
 						href='#projects'>
 						Projects
+					</a>
+					<a
+						className='text-[#637588] dark:text-gray-400 hover:text-primary transition-colors font-medium'
+						href='#skills'>
+						Skills
 					</a>
 					<a
 						className='text-[#637588] dark:text-gray-400 hover:text-primary transition-colors font-medium'

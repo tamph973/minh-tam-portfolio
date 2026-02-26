@@ -9,6 +9,14 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
 	const [isMobileOpen, setIsMobileOpen] = useState(false);
 
+	const navLinks = [
+		{ href: '#about', label: 'About', icon: 'person' },
+		{ href: '#projects', label: 'Projects', icon: 'dashboard' },
+		{ href: '#skills', label: 'Skills', icon: 'psychology' },
+		{ href: '#system', label: 'System', icon: 'architecture' },
+		{ href: '#contact', label: 'Contact', icon: 'mail' },
+	];
+
 	return (
 		<nav className='sticky top-0 z-50 w-full bg-white dark:bg-[#020617] border-b border-[#f0f2f4] dark:border-gray-800 transition-colors duration-300'>
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -22,26 +30,14 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
 						</span>
 					</div>
 					<div className='hidden md:flex items-center gap-8'>
-						<a
-							className='text-sm font-medium text-[#637588] dark:text-gray-400 hover:text-primary transition-colors'
-							href='#about'>
-							About
-						</a>
-						<a
-							className='text-sm font-medium text-[#637588] dark:text-gray-400 hover:text-primary transition-colors'
-							href='#projects'>
-							Projects
-						</a>
-						<a
-							className='text-sm font-medium text-[#637588] dark:text-gray-400 hover:text-primary transition-colors'
-							href='#skills'>
-							Skills
-						</a>
-						<a
-							className='text-sm font-medium text-[#637588] dark:text-gray-400 hover:text-primary transition-colors'
-							href='#contact'>
-							Contact
-						</a>
+						{navLinks.map((link) => (
+							<a
+								key={link.href}
+								className='text-sm font-medium text-[#637588] dark:text-gray-400 hover:text-primary transition-colors'
+								href={link.href}>
+								{link.label}
+							</a>
+						))}
 
 						<button
 							onClick={toggleTheme}
@@ -130,42 +126,18 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
 									</span>
 									<span>Home</span>
 								</a>
-								<a
-									href='#projects'
-									onClick={() => setIsMobileOpen(false)}
-									className='flex items-center gap-3 px-5 py-3 text-sm font-medium hover:bg-white/10'>
-									<span className='material-symbols-outlined text-base'>
-										dashboard
-									</span>
-									<span>Projects</span>
-								</a>
-								<a
-									href='#skills'
-									onClick={() => setIsMobileOpen(false)}
-									className='flex items-center gap-3 px-5 py-3 text-sm font-medium hover:bg-white/10'>
-									<span className='material-symbols-outlined text-base'>
-										psychology
-									</span>
-									<span>Skills</span>
-								</a>
-								<a
-									href='#about'
-									onClick={() => setIsMobileOpen(false)}
-									className='flex items-center gap-3 px-5 py-3 text-sm font-medium hover:bg-white/10'>
-									<span className='material-symbols-outlined text-base'>
-										person
-									</span>
-									<span>About</span>
-								</a>
-								<a
-									href='#contact'
-									onClick={() => setIsMobileOpen(false)}
-									className='flex items-center gap-3 px-5 py-3 text-sm font-medium hover:bg-white/10'>
-									<span className='material-symbols-outlined text-base'>
-										mail
-									</span>
-									<span>Contact</span>
-								</a>
+								{navLinks.map((link) => (
+									<a
+										key={link.href}
+										href={link.href}
+										onClick={() => setIsMobileOpen(false)}
+										className='flex items-center gap-3 px-5 py-3 text-sm font-medium hover:bg-white/10'>
+										<span className='material-symbols-outlined text-base'>
+											{link.icon}
+										</span>
+										<span>{link.label}</span>
+									</a>
+								))}
 								<div className='border-t border-white/10 p-4'>
 									<a
 										href='/PhamMinhTam_Resume.pdf'

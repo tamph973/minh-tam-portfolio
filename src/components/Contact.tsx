@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 
 interface FormState {
@@ -17,7 +17,7 @@ export const Contact: React.FC = () => {
 	const [formData, setFormData] = useState<FormState>({
 		name: '',
 		email: '',
-		message: ''
+		message: '',
 	});
 	const [errors, setErrors] = useState<FormErrors>({});
 	const [isSubmitting, setIsSubmitting] = useState(false);
@@ -54,16 +54,16 @@ export const Contact: React.FC = () => {
 
 		try {
 			const existingSubmissions = JSON.parse(
-				localStorage.getItem('portfolio_inquiries') || '[]'
+				localStorage.getItem('portfolio_inquiries') || '[]',
 			);
 			const newSubmission = {
 				...formData,
 				timestamp: new Date().toISOString(),
-				id: Math.random().toString(36).substr(2, 9)
+				id: Math.random().toString(36).substr(2, 9),
 			};
 			localStorage.setItem(
 				'portfolio_inquiries',
-				JSON.stringify([...existingSubmissions, newSubmission])
+				JSON.stringify([...existingSubmissions, newSubmission]),
 			);
 
 			setIsSuccess(true);
@@ -76,11 +76,10 @@ export const Contact: React.FC = () => {
 	};
 
 	const handleChange = (
-		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
 	) => {
 		const { name, value } = e.target;
 		setFormData((prev) => ({ ...prev, [name]: value }));
-		// Clear error when user starts typing
 		if (errors[name as keyof FormErrors]) {
 			setErrors((prev) => ({ ...prev, [name]: undefined }));
 		}
@@ -99,15 +98,25 @@ export const Contact: React.FC = () => {
 					{/* Left Column: Info & Socials */}
 					<div className='space-y-8'>
 						<div>
-							<h2 className='text-4xl font-black text-[#111418] dark:text-white mb-6'>
-								Let's Build Something Together
+							<h2 className='text-4xl font-black text-[#111418] dark:text-white mb-4'>
+								Open to Backend Developer Opportunities
 							</h2>
-							<p className='text-[#637588] dark:text-gray-400 text-lg leading-relaxed max-w-lg'>
-								I'm currently looking for new opportunities and
-								interesting projects. Whether you have a
-								question or just want to say hi, I'll try my
-								best to get back to you!
+							<p className='text-[#637588] dark:text-gray-400 text-lg leading-relaxed max-w-lg mb-6'>
+								Looking for Java / NodeJS backend roles — let's
+								connect and discuss how I can contribute to your
+								team.
 							</p>
+							{/* Recruiter CTA Badge */}
+							<div className='inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 border border-primary/20'>
+								<span className='relative flex h-2 w-2'>
+									<span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75'></span>
+									<span className='relative inline-flex rounded-full h-2 w-2 bg-primary'></span>
+								</span>
+								<span className='text-sm font-semibold text-primary'>
+									Available for Backend Developer roles (Java
+									/ NodeJS)
+								</span>
+							</div>
 						</div>
 
 						<div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
@@ -139,7 +148,7 @@ export const Contact: React.FC = () => {
 								</div>
 								<div className='flex flex-col'>
 									<span className='text-xs text-[#637588] dark:text-gray-500 font-bold uppercase tracking-wider'>
-										Github
+										GitHub
 									</span>
 									<span className='text-sm font-bold text-[#111418] dark:text-white'>
 										@tamph973
@@ -178,7 +187,7 @@ export const Contact: React.FC = () => {
 										CV
 									</span>
 									<span className='text-sm font-bold text-[#111418] dark:text-white'>
-										Download
+										Download Resume
 									</span>
 								</div>
 							</a>
@@ -222,7 +231,7 @@ export const Contact: React.FC = () => {
 											name='name'
 											value={formData.name}
 											onChange={handleChange}
-											placeholder='Pham Minh Tam'
+											placeholder='Your name'
 											className={`w-full px-4 py-3 rounded-lg bg-white dark:bg-[#0f172a] border ${
 												errors.name
 													? 'border-red-500'
@@ -247,7 +256,7 @@ export const Contact: React.FC = () => {
 											name='email'
 											value={formData.email}
 											onChange={handleChange}
-											placeholder='phtam0907@gmail.com'
+											placeholder='your@email.com'
 											className={`w-full px-4 py-3 rounded-lg bg-white dark:bg-[#0f172a] border ${
 												errors.email
 													? 'border-red-500'
@@ -274,7 +283,7 @@ export const Contact: React.FC = () => {
 										rows={5}
 										value={formData.message}
 										onChange={handleChange}
-										placeholder='Tell me about your project...'
+										placeholder='Tell me about the opportunity...'
 										className={`w-full px-4 py-3 rounded-lg bg-white dark:bg-[#0f172a] border ${
 											errors.message
 												? 'border-red-500'
@@ -313,14 +322,12 @@ export const Contact: React.FC = () => {
 											Processing...
 										</>
 									) : (
-										<>
-											<div className='flex items-center gap-2'>
-												<span>Send Message</span>
-												<span className='material-symbols-outlined transition-transform  '>
-													send
-												</span>
-											</div>
-										</>
+										<div className='flex items-center gap-2'>
+											<span>Send Message</span>
+											<span className='material-symbols-outlined transition-transform'>
+												send
+											</span>
+										</div>
 									)}
 								</button>
 							</form>

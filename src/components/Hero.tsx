@@ -2,6 +2,15 @@ import React from 'react';
 import { motion } from 'motion/react';
 
 export const Hero: React.FC = () => {
+	const techTags = [
+		'Java',
+		'Spring Boot',
+		'Node.js',
+		'MySQL',
+		'MongoDB',
+		'Docker',
+	];
+
 	return (
 		<motion.section
 			className='relative pt-24 pb-24 lg:pt-36 lg:pb-36 overflow-hidden bg-white dark:bg-[#0f172a] transition-colors duration-300'
@@ -15,24 +24,38 @@ export const Hero: React.FC = () => {
 						<span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75'></span>
 						<span className='relative inline-flex rounded-full h-2 w-2 bg-primary'></span>
 					</span>
-					Available for new opportunities
+					Open to Backend Developer opportunities
 				</div>
-				<h1 className='text-6xl sm:text-7xl lg:text-8xl font-black tracking-tight text-[#111418] dark:text-white mb-4'>
+				<h1 className='text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-[#111418] dark:text-white mb-4'>
 					Minh Tam
 				</h1>
-				<h2 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-8 tracking-tight'>
-					Backend Developer
+				<h2 className='text-xl sm:text-2xl lg:text-3xl font-bold text-primary mb-6 tracking-tight'>
+					Backend Developer — Java | NodeJS
 				</h2>
-				<p className='text-lg text-justify sm:text-xl text-[#637588] dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed'>
-					I build backend APIs using Node.js and Spring Boot, focusing
-					on clean code, RESTful design, and reliable data handling.
-					Passionate about learning, improving backend skills, and
-					building practical product features.
+				<p className='text-lg sm:text-xl text-[#637588] dark:text-gray-400 max-w-2xl mx-auto mb-8 leading-relaxed'>
+					I design and build RESTful APIs, database schemas, and
+					authentication systems — focused on clean architecture,
+					performance, and maintainability.
 				</p>
+
+				{/* Tech Tags */}
+				<div className='flex flex-wrap justify-center gap-2 mb-10'>
+					{techTags.map((tag) => (
+						<span
+							key={tag}
+							className='px-3 py-1.5 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-mono font-medium border border-gray-200 dark:border-gray-700'>
+							{tag}
+						</span>
+					))}
+				</div>
+
 				<div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
 					<a
 						className='w-full sm:w-auto inline-flex items-center justify-center h-12 px-8 rounded-lg bg-primary text-white font-bold text-base hover:bg-blue-600 transition-all shadow-sm shadow-blue-500/20'
 						href='#projects'>
+						<span className='material-symbols-outlined mr-2 text-xl'>
+							code
+						</span>
 						View Projects
 					</a>
 					<a
